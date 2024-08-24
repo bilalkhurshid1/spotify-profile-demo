@@ -21,7 +21,7 @@ async function redirectToAuthCodeFlow(clientId: string) {
     const params = new URLSearchParams();
     params.append("client_id", clientId);
     params.append("response_type", "code");
-    params.append("redirect_uri", "https://netlifytest--stirring-semifreddo-fcb577.netlify.app/");
+    params.append("redirect_uri", "https://stirring-semifreddo-fcb577.netlify.app");
     params.append("scope", "user-read-private user-read-email user-top-read");
     params.append("code_challenge_method", "S256");
     params.append("code_challenge", challenge);
@@ -56,7 +56,7 @@ async function getAccessToken(clientId: string, code: string) {
     params.append("client_id", clientId);
     params.append("grant_type", "authorization_code");
     params.append("code", code);
-    params.append("redirect_uri", "https://netlifytest--stirring-semifreddo-fcb577.netlify.app/");
+    params.append("redirect_uri", "https://stirring-semifreddo-fcb577.netlify.app");
     params.append("code_verifier", verifier!);
     
     const result = await fetch("https://accounts.spotify.com/api/token", {
