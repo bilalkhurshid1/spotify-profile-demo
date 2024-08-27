@@ -85,21 +85,14 @@ async function fetchTopArtists(token: string): Promise<any> {
         return await result.json();
     }
 
-function populateUI(profile: any) {
-    document.getElementById("displayName")!.innerText = profile.display_name;
-    if (profile.images[0]) {
-        const profileImage = new Image(200, 200);
-        profileImage.src = profile.images[1].url;
-        document.getElementById("avatar")!.appendChild(profileImage);
+    function populateUI(profile: any) {
+        document.getElementById("displayName")!.innerText = profile.display_name;
+        if (profile.images[0]) {
+            const profileImage = new Image(200, 200);
+            profileImage.src = profile.images[1].url;
+            document.getElementById("avatar")!.appendChild(profileImage);
+        }  
     }
-    document.getElementById("id")!.innerText = profile.id;
-    document.getElementById("country")!.innerText = profile.country;
-    document.getElementById("email")!.innerText = profile.email;
-    document.getElementById("uri")!.innerText = profile.uri;
-    document.getElementById("url")!.innerText = profile.external_urls.spotify;
-    document.getElementById("imgUrl")!.innerText = profile.images[0]?.url ?? '(no profile image)';
-
-}
 function populateUI2(top: any) {
     // Populating artist names
     for (let i = 0; i < 9; i++) {

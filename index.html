@@ -1,27 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title>My Spotify Profile</title>
-        <script src="src/script.ts" type="module"></script>
-    </head>
-    <body>
-        <span id="artist1"></span>
-        <h1>Your Top 9 Tracks of the last few weeks!</h1>
-        <h3>A Bilal Khurshid Production</h3>
+<head>
+    <meta charset="utf-8">
+    <title>My Spotify Profile</title>
+    <script src="src/script.ts" type="module"></script>
+    <style>
+        #profile {
+            display: flex;
+            align-items: center;
+            gap: 10px; /* Adjust spacing between the text and the avatar */
+        }
 
-        <section id="profile">
-            <h2>Logged in as <span id="displayName"></span></h2>
-            <span id="avatar"></span>
-            <ul>
-                <li>User ID: <span id="id"></span></li>
-                <li>Country: <span id="country"></span></li>
-                <li>Email: <span id="email"></span></li>
-                <li>Spotify URI: <a id="uri" href="#"></a></li>
-                <li>Link: <a id="url" href="#"></a></li>
-                <li>Profile Image: <span id="imgUrl"></span></li>
-            </ul>
-        </section>
+        #displayName {
+            font-size: 1.5em; /* Adjust as needed */
+        }
+
+        #avatar {
+            width: 50px; /* Adjust size as needed */
+            height: 50px; /* Adjust size as needed */
+            border-radius: 50%;
+            background-color: #ccc; /* Fallback color in case the image doesn't load */
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body>
+    <span id="artist1"></span>
+    <h1>Your Top 9 Tracks of the last few weeks!</h1>
+    <h3>A Bilal Khurshid Production</h3>
+
+    <section id="profile">
+        <h2>Logged in as <span id="displayName"></span></h2>
+        <span id="avatar"></span>
+    </section>     
 
         <section id="top-artists">
             <h2>Top 10 Tracks:</h2>
