@@ -6,8 +6,9 @@
         <script src="src/script.ts" type="module"></script>
     </head>
     <body>
-        <!-- <span id="artist1"></span> -->
-        <h1>Display your Spotify profile data</h1>
+        <span id="artist1"></span>
+        <h1>Your Top 9 Tracks of the last few weeks!</h1>
+        <h3>A Bilal Khurshid Production</h3>
 
         <section id="profile">
             <h2>Logged in as <span id="displayName"></span></h2>
@@ -23,7 +24,7 @@
         </section>
 
         <section id="top-artists">
-            <h2>Top 10 Artists:</h2>
+            <h2>Top 10 Tracks:</h2>
             <ul id="artist-list">
                 <li><span id="name1"></span></li>
                 <li><span id="name2"></span></li>
@@ -34,24 +35,38 @@
                 <li><span id="name7"></span></li>
                 <li><span id="name8"></span></li>
                 <li><span id="name9"></span></li>
-                <li><span id="name10"></span></li>
             </ul>
+            <h2>Top 10 Tracks Grid:</h2>
         </section>
-
+        
         <section id="top-artists-images">
-            <h2>Top 10 Artists Images:</h2>
-            <ul id="artist1image">
-                <span id="artist1"></span>
-                <span id="artist2"></span>
-                <span id="artist3"></span>
-                <span id="artist4"></span>
-                <span id="artist5"></span>
-                <span id="artist6"></span>
-                <span id="artist7"></span>
-                <span id="artist8"></span>
-                <span id="artist9"></span>
-                <span id="artist10"></span>
-            </ul>
-        </section>
+            <style>
+              #top-artists-images {
+                display: grid;
+                grid-template-columns: repeat(3, 250px);
+                grid-auto-rows: 250px;
+                gap: 5px;
+                justify-items: center;
+                align-items: center;
+              }
+          
+              #top-artists-images img {
+                width: 250px;
+                height: 250px;
+                object-fit: cover;
+              }
+            </style>
+
+            <img id="url1" alt="Artist 1">
+            <img id="url2" alt="Artist 2">
+            <img id="url3" alt="Artist 3">
+            <img id="url4" alt="Artist 4">
+            <img id="url5" alt="Artist 5">
+            <img id="url6" alt="Artist 6">
+            <img id="url7" alt="Artist 7">
+            <img id="url8" alt="Artist 8">
+            <img id="url9" alt="Artist 9">
+        </section> 
+        
     </body>
 </html>
