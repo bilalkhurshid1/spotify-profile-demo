@@ -121,4 +121,10 @@ function populateUI2(top: any) {
             }
         }
     }
+    for (let i = 0; i < 9; i++) {
+        const element = document.getElementById(`artistname${i + 1}`);
+        if (element) {
+            element.innerText = top.items[i]?.artists[0].name || "Name not available";
+        }
+    }
 }
