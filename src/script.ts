@@ -102,7 +102,7 @@ function populateUI(profile: any) {
 }
 function populateUI2(top: any) {
     for (let i = 0; i < 10; i++) {
-        const element = document.getElementById(`track${i + 1}`);
+        const element = document.getElementById(`name${i + 1}`);
         if (element) {
             element.innerText = top.items[i]?.name || "Name not available";
         }
