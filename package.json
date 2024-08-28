@@ -5,8 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "start": "SET NODE_ENV=production & ts-node netlify/functions/api.ts",
-    "build": "tsc && vite build",
+    "start": "SET NODE_ENV=production & js-node netlify/functions/api.js",
+    "build": "jsc && vite build",
     "preview": "vite preview"
   },
   "devDependencies": {
