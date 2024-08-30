@@ -4,15 +4,11 @@
     <meta charset="utf-8">
     <title>My Spotify Profile</title>
     <script src="./src/main.js" type="module"></script>
-    <style>
-        #content {
-            display: none;
-        }
-    </style>
 </head>
 
-<div class="container h-100 d-flex flex-column justify-content-center align-items-center">
-    <div id="preview-message">
+<div class="container-fluid d-flex flex-column justify-content-center align-items-center vh-100">
+    <!-- Preview Message -->
+    <div id="preview-message" class="mb-4"> <!-- mb-4 adds some margin-bottom to space out elements -->
         <div class="row d-flex justify-content-center">
             <div class="col-auto">
                 <h4>
@@ -21,25 +17,28 @@
             </div>
         </div>
     </div>
-    <div class="row button-row justify-content-center mt-4">
+
+    <!-- Button -->
+    <div class="row button-row justify-content-center">
         <div class="col-auto">
             <a class="btn btn-light btn-lg auth-button" id="auth-button">Generate my grid!</a>
         </div>
     </div>
 </div>
 
+
 <body>
-    <div id="content">
+    <div id="content" class="container mt-5">
         <span id="artist1"></span>
         <h1>Your Top 9 Tracks of the last few weeks!</h1>
         <h3>A Bilal Khurshid Production</h3>
 
-        <section id="profile">
+        <section id="profile" class="text-center mb-4">
             <h2>Logged in as <span id="displayName"></span></h2>
             <span id="avatar"></span>
         </section>
 
-        <section id="top-artists">
+        <section id="top-artists" class="mb-4">
             <h2>Top 9 Tracks:</h2>
             <ul id="artist-list">
                 <li><span id="name1"></span> by <span id="artistname1"></span></li>
@@ -55,24 +54,7 @@
             <h2>Top 9 Tracks Grid:</h2>
         </section>
 
-        <section id="top-artists-images">
-            <style>
-              #top-artists-images {
-                display: grid;
-                grid-template-columns: repeat(3, 250px);
-                grid-auto-rows: 250px;
-                gap: 0px;
-                justify-items: center;
-                align-items: center;
-              }
-
-              #top-artists-images img {
-                width: 250px;
-                height: 250px;
-                object-fit: cover;
-              }
-            </style>
-
+        <section id="top-artists-images" class="text-center">
             <img id="url1" alt="Artist 1">
             <img id="url2" alt="Artist 2">
             <img id="url3" alt="Artist 3">

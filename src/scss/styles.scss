@@ -7,3 +7,23 @@ body {
     color: #c6b9b9; 
     font-family: 'Roboto', sans-serif;
 }
+
+#top-artists-images {
+    display: grid;
+    grid-template-columns: repeat(3, 250px);
+    grid-auto-rows: 250px;
+    gap: 0px;
+    justify-items: center;
+    align-items: center;
+  }
+
+#top-artists-images img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+  }
+
+/* Hide content by default */
+#content {
+    display: none;
+}
