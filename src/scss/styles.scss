@@ -1,0 +1,9 @@
+// Import all of Bootstrap's CSS
+@import "bootstrap/scss/bootstrap";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+    background-color: #2c2828;
+    color: #c6b9b9; 
+    font-family: 'Roboto', sans-serif;
+}
