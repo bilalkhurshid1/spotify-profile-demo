@@ -1,68 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-<body style="background-color:lightgray;">
 <head>
     <meta charset="utf-8">
     <title>My Spotify Profile</title>
-    <script src="src/main.js" type="module"></script>
+    <script src="./src/main.js" type="module"></script>
     <style>
-        #profile {
-            display: flex;
-            align-items: center;
-            gap: 10px; /* Adjust spacing between the text and the avatar */
-        }
-
-        #displayName {
-            font-size: 1.5em; /* Adjust as needed */
-        }
-
-        #avatar {
-            width: 50px; /* Adjust size as needed */
-            height: 50px; /* Adjust size as needed */
-            border-radius: 50%;
-            background-color: #ccc; /* Fallback color in case the image doesn't load */
-            background-size: cover;
-            background-position: center;
+        /* Initially hide the content until user is authenticated */
+        #content {
+            display: none;
         }
     </style>
 </head>
-<body>
-    <span id="artist1"></span>
-    <h1>Your Top 9 Tracks of the last few weeks!</h1>
-    <h3>A Bilal Khurshid Production</h3>
 
-    <section id="profile">
-        <h2>Logged in as <span id="displayName"></span></h2>
-        <span id="avatar"></span>
-    </section>     
+    <div id ="preview-message" class="col-lg">
+        <div class="row d-flex justify-content-center">
+            <h4>
+                This is an app that generates a grid of your most
+listened to tracks of the last few weeks!
+            </h4>
+        </div>
+    </div>
+<body style="background-color:lightgray;">
+    <div class="row button-row justify-content-center">
+        <button class="btn btn-light btn-lg auth-button"
+id="auth-button">Generate my grid!</button>
+    </div>
+
+    <div id="content">
+        <span id="artist1"></span>
+        <h1>Your Top 9 Tracks of the last few weeks!</h1>
+        <h3>A Bilal Khurshid Production</h3>
+
+        <section id="profile">
+            <h2>Logged in as <span id="displayName"></span></h2>
+            <span id="avatar"></span>
+        </section>
 
         <section id="top-artists">
             <h2>Top 9 Tracks:</h2>
             <ul id="artist-list">
-                <li><span id="name1"></span> by <span id="artistname1"></span></li>
-                <li><span id="name2"></span> by <span id="artistname2"></span></li>
-                <li><span id="name3"></span> by <span id="artistname3"></span></li>
-                <li><span id="name4"></span> by <span id="artistname4"></span></li>
-                <li><span id="name5"></span> by <span id="artistname5"></span></li>
-                <li><span id="name6"></span> by <span id="artistname6"></span></li>
-                <li><span id="name7"></span> by <span id="artistname7"></span></li>
-                <li><span id="name8"></span> by <span id="artistname8"></span></li>
-                <li><span id="name9"></span> by <span id="artistname9"></span></li>
+                <li><span id="name1"></span> by <span
+id="artistname1"></span></li>
+                <li><span id="name2"></span> by <span
+id="artistname2"></span></li>
+                <li><span id="name3"></span> by <span
+id="artistname3"></span></li>
+                <li><span id="name4"></span> by <span
+id="artistname4"></span></li>
+                <li><span id="name5"></span> by <span
+id="artistname5"></span></li>
+                <li><span id="name6"></span> by <span
+id="artistname6"></span></li>
+                <li><span id="name7"></span> by <span
+id="artistname7"></span></li>
+                <li><span id="name8"></span> by <span
+id="artistname8"></span></li>
+                <li><span id="name9"></span> by <span
+id="artistname9"></span></li>
             </ul>
             <h2>Top 9 Tracks Grid:</h2>
         </section>
-        
+
         <section id="top-artists-images">
             <style>
               #top-artists-images {
                 display: grid;
                 grid-template-columns: repeat(3, 250px);
                 grid-auto-rows: 250px;
-                gap: 5px;
+                gap: 0px;
                 justify-items: center;
                 align-items: center;
               }
-          
+
               #top-artists-images img {
                 width: 250px;
                 height: 250px;
@@ -79,7 +88,7 @@
             <img id="url7" alt="Artist 7">
             <img id="url8" alt="Artist 8">
             <img id="url9" alt="Artist 9">
-        </section> 
-        
-    </body>
+        </section>
+    </div>
+</body>
 </html>
