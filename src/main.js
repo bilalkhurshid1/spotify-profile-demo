@@ -15,14 +15,7 @@ async function handleAuthorization() {
         const top = await fetchTopArtists(accessToken);
         populateUI(profile);
         populateUI2(top);
-
-        // new section these six lines
-        document.getElementById('auth-button').style.display = 'none';
-        document.getElementById('preview-message').style.display = 'none';
-        document.getElementById('content').style.display = 'block';
-    } else {
-        document.getElementById('auth-button').style.display = 'block';
-        document.getElementById('content').style.display ='none';
+        
     }
 
 

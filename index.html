@@ -5,66 +5,22 @@
     <title>My Spotify Profile</title>
     <script src="./src/main.js" type="module"></script>
 </head>
-
-<div class="container-fluid d-flex flex-column justify-content-center align-items-center vh-100">
-    <!-- Preview Message -->
-    <div id="preview-message" class="mb-4"> <!-- mb-4 adds some margin-bottom to space out elements -->
-        <div class="row d-flex justify-content-center">
-            <div class="col-auto">
-                <h4>
-                    This is an app that generates a grid of your most listened to tracks of the last few weeks!
-                </h4>
+<body>
+    <div class="container h-100 d-flex flex-column justify-content-center align-items-center">
+        <div id="preview-message">
+            <div class="row d-flex justify-content-center">
+                <div class="col-auto">
+                    <h4>
+                        This is an app that generates a grid of your most listened to tracks of the last few weeks!
+                    </h4>
+                </div>
             </div>
         </div>
-    </div>
-
-    <!-- Button -->
-    <div class="row button-row justify-content-center">
-        <div class="col-auto">
-            <a class="btn btn-light btn-lg auth-button" id="auth-button">Generate my grid!</a>
+        <div class="row button-row justify-content-center mt-4">
+            <div class="col-auto">
+                <a class="btn btn-light btn-lg auth-button" id="auth-button">Generate my grid!</a>
+            </div>
         </div>
-    </div>
-</div>
-
-
-<body>
-    <div id="content" class="container mt-5">
-        <span id="artist1"></span>
-        <h1>Your Top 9 Tracks of the last few weeks!</h1>
-        <h3>A Bilal Khurshid Production</h3>
-
-        <section id="profile" class="text-center mb-4">
-            <h2>Logged in as <span id="displayName"></span></h2>
-            <span id="avatar"></span>
-        </section>
-
-        <section id="top-artists" class="mb-4">
-            <h2>Top 9 Tracks:</h2>
-            <ul id="artist-list">
-                <li><span id="name1"></span> by <span id="artistname1"></span></li>
-                <li><span id="name2"></span> by <span id="artistname2"></span></li>
-                <li><span id="name3"></span> by <span id="artistname3"></span></li>
-                <li><span id="name4"></span> by <span id="artistname4"></span></li>
-                <li><span id="name5"></span> by <span id="artistname5"></span></li>
-                <li><span id="name6"></span> by <span id="artistname6"></span></li>
-                <li><span id="name7"></span> by <span id="artistname7"></span></li>
-                <li><span id="name8"></span> by <span id="artistname8"></span></li>
-                <li><span id="name9"></span> by <span id="artistname9"></span></li>
-            </ul>
-            <h2>Top 9 Tracks Grid:</h2>
-        </section>
-
-        <section id="top-artists-images" class="text-center">
-            <img id="url1" alt="Artist 1">
-            <img id="url2" alt="Artist 2">
-            <img id="url3" alt="Artist 3">
-            <img id="url4" alt="Artist 4">
-            <img id="url5" alt="Artist 5">
-            <img id="url6" alt="Artist 6">
-            <img id="url7" alt="Artist 7">
-            <img id="url8" alt="Artist 8">
-            <img id="url9" alt="Artist 9">
-        </section>
     </div>
 </body>
 </html>

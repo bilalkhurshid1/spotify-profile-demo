@@ -5,29 +5,9 @@
     <title>My Spotify Profile</title>
     <script src="./src/main.js" type="module"></script>
     <style>
-        #content {
-            display: none;
-        }
+        
     </style>
 </head>
-
-<div class="container h-100 d-flex flex-column justify-content-center align-items-center">
-    <div id="preview-message">
-        <div class="row d-flex justify-content-center">
-            <div class="col-auto">
-                <h4>
-                    This is an app that generates a grid of your most listened to tracks of the last few weeks!
-                </h4>
-            </div>
-        </div>
-    </div>
-    <div class="row button-row justify-content-center mt-4">
-        <div class="col-auto">
-            <a class="btn btn-light btn-lg auth-button" id="auth-button">Generate my grid!</a>
-        </div>
-    </div>
-</div>
-
 <body>
     <div id="content">
         <span id="artist1"></span>
@@ -56,23 +36,6 @@
         </section>
 
         <section id="top-artists-images">
-            <style>
-              #top-artists-images {
-                display: grid;
-                grid-template-columns: repeat(3, 250px);
-                grid-auto-rows: 250px;
-                gap: 0px;
-                justify-items: center;
-                align-items: center;
-              }
-
-              #top-artists-images img {
-                width: 250px;
-                height: 250px;
-                object-fit: cover;
-              }
-            </style>
-
             <img id="url1" alt="Artist 1">
             <img id="url2" alt="Artist 2">
             <img id="url3" alt="Artist 3">
