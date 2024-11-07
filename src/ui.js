@@ -1,8 +1,8 @@
 export function populateUI(profile) {
     document.getElementById("displayName").innerText = profile.display_name;
     if (profile.images[0]) {
-        const profileImage = new Image(200, 200);
-        profileImage.src = profile.images[1].url;
+        const profileImage = new Image(300, 300);
+        profileImage.src = profile.images[0].url;
         document.getElementById("avatar").appendChild(profileImage);
     }  
 }
