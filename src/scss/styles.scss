@@ -1,26 +1,29 @@
+// Import all of Bootstrap's CSS
+@import "bootstrap/scss/bootstrap";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 body {
-  background-color: #2c2828;
-  color: #c6b9b9; 
-  font-family: 'Roboto', sans-serif;
-}
-
-#content {
-  display: flex; /* Use Flexbox for layout */
-  flex-wrap: wrap; /* Allow wrapping if needed */
-  justify-content: space-between; /* Space out the items */
-}
-
-#top-artists {
-  flex: 1; /* Take up remaining space */
-  margin-right: 20px; /* Add some space between sections */
+    background-color: #2c2828;
+    color: #c6b9b9; 
+    font-family: 'Roboto', sans-serif;
 }
 
 #top-artists-images {
-  display: grid;
-  grid-template-columns: repeat(3, 250px);
-  grid-auto-rows: 250px;
-  gap: 0px;
-  justify-items: center;
-  align-items: center;
-  flex: 1; /* Take up remaining space */
-}
+    display: grid;
+    grid-template-columns: repeat(3, 250px);
+    grid-auto-rows: 250px;
+    gap: 0px;
+    justify-items: center;
+    align-items: center;
+  }
+
+#top-artists-images img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+  }
+
+/* Hide content by default */
+// #content {
+//     display: none;
+// }
